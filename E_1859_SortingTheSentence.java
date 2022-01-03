@@ -1,14 +1,14 @@
     public String sortSentence(String s) {
-        StringBuilder ret = new StringBuilder();
-        String[] words = s.split(" ");
-        String[] sorted = new String[words.length];
+        StringBuilder x= new StringBuilder();
+        String[] words =s.split(" ");
+        String[] sirali = new String[words.length];
 
         for (String word : words)
-            sorted[word.charAt(word.length() - 1) - 49] = word.replace(word.charAt(word.length() - 1), ' ');
+            sirali[word.charAt(word.length() - 1) - 49] = word.replace(word.charAt(word.length() - 1), ' ');
         
-        for (String value : sorted)
-            ret.append(value);
+        for (String value : sirali)
+            x.append(value);
         
-        ret.deleteCharAt(x.length()-1);
-        return ret.toString();
+        x.deleteCharAt(x.length()-1);
+        return x.toString();
     }

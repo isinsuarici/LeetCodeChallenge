@@ -1,9 +1,6 @@
 class Solution:
-    def findComplement(self, num: int) -> int:
-        i=0
-        j=0
-        while(i<num):
-            i+= 2**j
-            j=j+1
-        return i-num
-    
+    def findComplement(self, num):
+        i=1
+        while i<=num:
+            i=i*2
+        return (i-1)^num
